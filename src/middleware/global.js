@@ -1,3 +1,5 @@
+import { monthToAbbrev } from '../includes/helpers.js';
+
 /**
  * Helper function to set all expected res.locals values
  */
@@ -7,6 +9,9 @@ const setLocalVariables = (req, res, next) => {
 
     // Make any query parameters available to all templates
     res.locals.query = req.query;
+
+    // Make helper functions available to all templates
+    res.locals.monthToAbbrev = monthToAbbrev;
 
     next();
 };
