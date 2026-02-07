@@ -1,3 +1,33 @@
+#filters {
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: 1fr;
+}
+
+#filters select {
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--clr-border);
+    background-color: var(--clr-surface);
+}
+
+@media (min-width: 640px) {
+    #filters {
+        grid-template-columns: 1fr 1fr;
+        row-gap: var(--space-xs);
+    }
+
+    #filters select:first-of-type {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #filters select:last-of-type {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
 .routes-grid {
     display: flex;
     flex-direction: column;
