@@ -395,7 +395,7 @@ article.confirmation-page {
             }
         }
     }
-}
+
 
 @keyframes scaleIn {
     from {
@@ -409,6 +409,7 @@ article.confirmation-page {
 }
 
 @media print {
+    footer,
     header,
     header.content-grid,
     header .logo,
@@ -420,7 +421,6 @@ article.confirmation-page {
         color: black;
         font-size: 10pt;
     }
-
     article.confirmation-page {
         max-width: 100%;
         margin: 0;
@@ -436,7 +436,6 @@ article.confirmation-page {
                 display: none;
             }
         }
-
         .confirmation-content {
             gap: var(--space-lg);
 
@@ -448,22 +447,8 @@ article.confirmation-page {
                 .details-grid {
                     grid-template-columns: repeat(4, 1fr);
                     gap: var(--space-xs);
-
-                    .detail-card {
-                        padding: 0;
-                        background-color: transparent;
-                        border: none;
-                        border-radius: 0;
-                        box-shadow: none;
-                        gap: var(--space-xs);
-
-                        .detail-icon {
-                            display: none;
-                        }
-                    }
                 }
             }
-
             .passengers-info {
                 .passengers-list {
                     display: flex;
@@ -481,15 +466,12 @@ article.confirmation-page {
 
                         .passenger-details {
                             padding: 0;
-
                             .passenger-detail:nth-child(n + 2) {
                                 display: none;
                             }
-
                             .passenger-detail {
                                 gap: 0;
                             }
-
                             .passenger-label {
                                 display: none;
                             }
@@ -499,7 +481,6 @@ article.confirmation-page {
             }
 
             .next-steps {
-
                 .steps-list {
                     gap: 2px;
 
@@ -528,7 +509,6 @@ article.confirmation-page {
                     }
                 }
             }
-
             .important-info {
                 padding: var(--space-sm);
 
@@ -537,14 +517,13 @@ article.confirmation-page {
                 }
 
                 .info-list {
-                    gap: calc(var(--space-xs) / 2);
+                    gap: var(--space-xxs);
 
                     li {
                         line-height: 1.3;
                     }
                 }
             }
-
             .confirmation-actions {
                 display: none;
             }
